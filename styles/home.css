@@ -1,1 +1,144 @@
 /* Insert styles here! */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 16px
+}
+
+.header-nav-desktop {
+  display: none;
+}
+
+.menu-mobile-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  padding: 24px;
+  transition: 0.5s;
+  transform: translate(0, -100vh);
+}
+
+.menu-mobile-show {
+  transform: translate(0, 0);
+}
+
+.btn-menu-mobile-close {
+  display: block;
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.menu-mobile-nav-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu-mobile-nav-container ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  color: #000000;
+}
+
+
+main {
+  width: 100%;
+}
+
+.hero-avatar-container img {
+  display: block;
+  margin: auto;
+}
+
+#hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-content-container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.hero-content-container h2 {
+  font-weight: 700;
+  font-size: 32px;
+  color: #21243D;
+  text-align: center;
+  line-height: 40px;
+}
+
+.hero-content-container p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23.5px;
+  text-align: center;
+}
+
+.hero-content-container button {
+  padding: 12px 20px;
+  background-color: #FF6464;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 20px;
+  width: 208px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-button-mobile {
+    display: none;
+  }
+
+  .header-nav-desktop {
+    display: block;
+  }
+
+  .header-nav-desktop ul {
+    display: flex;
+    gap: 16px;
+  }
+
+  .header-nav-desktop ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000;
+  }
+
+  #hero {
+    flex-direction: row-reverse;
+  }
+
+  .hero-content-container {
+    align-items: flex-start;
+  }
+
+  .hero-content-container h2 {
+    text-align: left;
+    font-size: 44px;
+    line-height: 60px;
+  }
+
+  .hero-content-container p {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    max-width: 1280px;
+    margin: auto;
+  }
+}

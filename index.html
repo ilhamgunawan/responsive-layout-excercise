@@ -9,12 +9,72 @@
   <title>Home</title>
 </head>
 <body>
-  <header></header>
+  <header>
+    <button class="header-button-mobile"><img src="./icons/menu.png"></button>
+    <nav class="header-nav-desktop">
+      <ul>
+        <li>
+          <a href="#works">Works</a>
+        </li>
+        <li>
+          <a href="#blog">Blog</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Begin of Menu Mobile -->
+  <div class="menu-mobile-container">
+    <button class="btn-menu-mobile-close">X</button>
+    <nav class="menu-mobile-nav-container">
+      <ul>
+        <li>
+          <a href="#works">Works</a>
+        </li>
+        <li>
+          <a href="#blog">Blog</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- End of Menu Mobile -->
 
   <main>
-    <h1>Hello world!</h1>
+
+    <!-- Begin Hero Section -->
+    <div id="hero">
+      <div class="hero-avatar-container">
+        <img src="./images/avatar.png">
+      </div>
+      <div class="hero-content-container">
+        <h2>Hi, I am John, Creative Technologist</h2>
+        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+        <button>Download Resume</button>
+      </div>
+    </div>
+    <!-- End of Hero Section -->
+
   </main>
 
   <footer></footer>
+
+  <script>
+    const hamburgerButton = document.querySelector('.header-button-mobile')
+    const menuMobileContainer = document.querySelector('.menu-mobile-container')
+    const menuMobileCloseButton = document.querySelector('.btn-menu-mobile-close')
+
+    function toggleMenuMobile() {
+      menuMobileContainer.classList.toggle('menu-mobile-show')
+    }
+
+    hamburgerButton.addEventListener('click', toggleMenuMobile)
+    menuMobileCloseButton.addEventListener('click', toggleMenuMobile)
+  </script>
 </body>
 </html>
